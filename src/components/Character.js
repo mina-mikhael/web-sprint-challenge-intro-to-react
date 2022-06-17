@@ -2,6 +2,8 @@
 import Details from "./Details";
 import { useState } from "react";
 import styled from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "reactstrap";
 
 const StyledCharacter = styled.div`
   background-color: #968759af;
@@ -11,7 +13,7 @@ const StyledCharacter = styled.div`
   flex-flow: column wrap;
   justify-content: space-between;
   width: 40%;
-  margin: 0.2rem;
+  margin: 0.4rem;
   border: 2px double #5b552ff4;
   font-size: 1.4rem;
   text-shadow: 1px 1px 5px #ddd;
@@ -21,18 +23,13 @@ const CharacterDiv = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 0 1.2rem;
+  margin: 1.1rem 1.2rem;
 `;
 
 const ButtonDiv = styled.div`
   display: block;
   align-self: right;
   margin-bottom: 0.5rem;
-`;
-
-const StyledButton = styled.button`
-  border: 1.5px solid #5e3902f4;
-  background-color: #9b6109f4;
 `;
 
 const Character = (props) => {
@@ -50,7 +47,9 @@ const Character = (props) => {
         <h3>{character.birth_year}</h3>
       </CharacterDiv>
       <ButtonDiv>
-        <button onClick={() => detailsOn()}>details </button>
+        <Button onClick={() => detailsOn()} class="btn-secondary btn-sm btn-info">
+          Details
+        </Button>
       </ButtonDiv>
       {isOn && <Details details={character} />}
     </StyledCharacter>

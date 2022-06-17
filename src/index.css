@@ -18,11 +18,3 @@ p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   font-weight: 300;
 }
-p :nth-last-of-type(15) {
-  background-color: #ffd900d5;
-  display: flex;
-  border: 1.5px solid #9b6109f4;
-  font-family: Helvetica, sans-serif;
-  color: #968759dd;
-  box-sizing: border-box;
-}
